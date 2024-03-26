@@ -1,0 +1,63 @@
+#22 - PROJECT 2 SETUP + INTRODUCTION TO CLASS BASED COMPONENTS:
+
+If you want to open any folder in powershell easily: shift + rightClick (double tap in laptop) and choose open with powershell
+
+code . -> in terminal to open that perticular folder in new vs code window.
+
+until now it was function based components now its class based components
+
+rfc -> function based component
+rcc -> class based component 
+
+create-react-app by default preffered function based component, we removed it in src/App.js and used class based component.
+
+rcc->
+import React, { Component } from 'react';
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+}
+
+In class based component state, props and other things are a bit different from function based component. If class concept is known then methods management is easier in this.
+
+In this project we will develop a news app using API https://newsapi.org/
+
+
+
+#23 - COMPONENT STRUCTURE OF NEWSMONKEY REACT APP:
+
+
+FETCHING API KEY FROM NEWS API:
+UNDERSTANDING STATE IN CLASS BASED COMPONENTS:
+LOOPING THROUGH AN ARRAY IN JSX:
+USING FETCH API FOR HTTP CALL:
+ADDING PREVIOUS AND NEXT BUTTON:
+ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: --spinner pending--
+ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
+FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): --pending--
+ADDING TIME, AUTHOR AND NEWS SOURCES:
+REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
+REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
+ * The series of events that happen from the mounting of a React component to its Unmounting.
+    *Mounting - Birth of your component
+    *Update - Grouth of your component
+    *Unmount - Death of your component
+
+ Methods in React Component Lifecycle
+    * The render() methos is used to render HTML of the component in react. This method is required for a class based component to render the DOM. It runs during the mounting and updating of your component. Render() method should be pure ie you cannot modify state inside it.
+    * The componentDidMount() method runs after the component output has been rendered to the DOM.
+    * The componentDidUpdate() method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
+    * The componentWillUnmount() lifecycle method is called just before the component is unmounted and destroyed. Usually used to perform cleanups.
+    https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+ADDING INFINITE SCROLL TO NEWSMONKEY: npm i react-infinite-scroll-component
+ADDING A TOP LOADING BAR TO NEWSMONKEY: npm i react-top-loading-bar
+HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
+INTRODUCTION TO REACT HOOKS:
+CHANGING CLASS BASED TO FUNCTION BASED:
+STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
