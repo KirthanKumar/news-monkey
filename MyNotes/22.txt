@@ -30,7 +30,20 @@ In this project we will develop a news app using API https://newsapi.org/
 
 
 #23 - COMPONENT STRUCTURE OF NEWSMONKEY REACT APP:
+rce-> react class export component
+import React, { Component } from 'react';
+export class Navbar extends Component {
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+}
+export default Navbar;
 
+render() function in src/App.js compiles JSX to html and renders it.
 
 FETCHING API KEY FROM NEWS API:
 UNDERSTANDING STATE IN CLASS BASED COMPONENTS:
