@@ -5,12 +5,22 @@ export class News extends Component {
   // rce
   render() {
     return (
-      <div>
-        This is news component
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
+      <div className="container my-3">
+        <h2>NewsMonkey - Top Headlines</h2>
+        <div className="row">
+          <div className="col-md-4">
+            <NewsItem title="My Title" description="desc" />
+          </div>
+          <div className="col-md-4">
+            <NewsItem title="My Title" description="desc" />
+          </div>
+          <div className="col-md-4">
+            <NewsItem title="My Title" description="desc" />
+          </div>
+          <div className="col-md-4">
+            <NewsItem title="My Title" description="desc" />
+          </div>
+        </div>
       </div>
     );
   }

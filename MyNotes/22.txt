@@ -27,7 +27,7 @@ In class based component state, props and other things are a bit different from 
 
 In this project we will develop a news app using API https://newsapi.org/
 
-
+-------------------------------------------------------------------
 
 #23 - COMPONENT STRUCTURE OF NEWSMONKEY REACT APP:
 rce-> react class export component
@@ -45,7 +45,21 @@ export default Navbar;
 
 render() function in src/App.js compiles JSX to html and renders it.
 
+-------------------------------------------------------------------
+
 FETCHING API KEY FROM NEWS API:
+https://newsapi.org/docs/get-started
+In here we can see sample request, and response in json format. 
+
+There are two endpoints in this api, we choose 'top headlines': see and understand all sample GET request and responses. https://newsapi.org/docs/endpoints/top-headlines
+https://newsapi.org/v2/top-headlines?country=us&apiKey=c4c450c08e904226a8ff20ed56c63844
+
+I added json-formatter extension in google chrome.
+
+Instead of performing GET request again and again to see the response for https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c4c450c08e904226a8ff20ed56c63844 . I store the response to this GET request in a sampleOutput.json file to ease while developing the project by seeing the response again and again. Ofcourse in project we we perform a API call to request and get response.
+
+-------------------------------------------------------------------
+
 UNDERSTANDING STATE IN CLASS BASED COMPONENTS:
 LOOPING THROUGH AN ARRAY IN JSX:
 USING FETCH API FOR HTTP CALL:
