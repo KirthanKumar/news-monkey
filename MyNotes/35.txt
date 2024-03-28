@@ -25,11 +25,19 @@ npm i react-top-loading-bar
 
 .this can be used with arrow function only not normal function.
 
-when request limit is exhausted we get a error saying this.atate.articles is not defined
+when request limit is exhausted we get a error saying this.atate.articles is not defined. Or try to reach some uel to get news manually, they will say too many requests and its exhausted.
 
 -------------------------------------------------------------------
 
 #37 - HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
+we can create .env.local file in our project to store and use secrets like password, email, apikey etc. This .enc.local file should also be added to .gitignore file.
+
+After creating .ev.local file and adding environment variables we have to restart the development server so that those variables are load. 
+
+apiKey = process.env.REACT_APP_NEWS_API;
+
+-------------------------------------------------------------------
+
 #38 - INTRODUCTION TO REACT HOOKS:
 #39 - CHANGING CLASS BASED TO FUNCTION BASED:
 #40 - STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
