@@ -39,7 +39,7 @@ apiKey = process.env.REACT_APP_NEWS_API;
 -------------------------------------------------------------------
 
 #38 - INTRODUCTION TO REACT HOOKS:
-
+We used class based components only for learning prpose, mostly we will use  function based components. We will convert this news-monkey project fully from class to function based components project. 
 
 -------------------------------------------------------------------
 
