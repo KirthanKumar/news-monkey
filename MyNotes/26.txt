@@ -1,7 +1,10 @@
 #26 - LOOPING THROUGH AN ARRAY IN JSX:
+When we use map() method and iterate over items then we have to give a unique 'key' defining item. In here we will be using "url" in "articles" array as unique identifier of each item. That is key={element.url}
+and also newsUrl={element.url} as discussed earlier.
 
+-------------------------------------------------------------------
 
-USING FETCH API FOR HTTP CALL:
+#27 - USING FETCH API FOR HTTP CALL:
 ADDING PREVIOUS AND NEXT BUTTON:
 ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: --spinner pending--
 ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:

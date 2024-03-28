@@ -76,3 +76,5 @@ this.state should not be set directly instead should use this.setState() to set 
 we use this.state and this.setState() when we want something to change again and again without reloading page. So we will not set title, description etc.. as state instead will pass it a prop to the component. This is major difference between props and state.
 
 'newsUrl' send as prop to NewsItem component will uniquely define the news. If we see in 'articles' array of 'sampleOutput.json' file we see that "url" uniquely defines the news. so we will pass "url" to "newsUrl" from News.js to NewsItem component.
+
+https://legacy.reactjs.org/docs/state-and-lifecycle.html
