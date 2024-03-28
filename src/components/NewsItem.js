@@ -10,7 +10,7 @@ export class NewsItem extends Component {
     let { title, description, imageUrl, newsUrl } = this.props; // destructuring
     return (
       <div className="my-3">
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card">
           <img
             src={
               imageUrl
@@ -19,8 +19,8 @@ export class NewsItem extends Component {
             }
             className="card-img-top"
             alt="..."
-            height="161 px"
-            width="286 px"
+            // height="161 px"
+            // width="286 px"
           />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>

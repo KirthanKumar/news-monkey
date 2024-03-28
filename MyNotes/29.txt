@@ -1,4 +1,4 @@
-#29 - ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: 
+#29 - ADDING LOADING SPINNER AND VARIABLE PAGESIZE TO NEWSMONKEY: 
 this condition says that when loading is false then only display the result. 
 {!(this.state.loading) && this.state.articles.map((element) => {
             return (
@@ -28,6 +28,7 @@ To delay the reponses from the API we can do network throttling slow down the ne
 -------------------------------------------------------------------
 
 #30 - ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
+https://newsapi.org/docs/endpoints/top-headlines
 
 -------------------------------------------------------------------
 
