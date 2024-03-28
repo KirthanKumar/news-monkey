@@ -32,8 +32,14 @@ https://newsapi.org/docs/endpoints/top-headlines
 
 -------------------------------------------------------------------
 
-FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): --pending--
-ADDING TIME, AUTHOR AND NEWS SOURCES:
+#31 - FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): 
+same as done for previous projects
+
+in path "/" News component is already mounted with catrgory="general", therefore when we change the path to for example "/buniness" react is not sending the updated props and remounting it. So to solve this we use unique "key" parameter as prop to News component tag and its solved.
+
+-------------------------------------------------------------------
+
+#32 - ADDING TIME, AUTHOR AND NEWS SOURCES:
 REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
 REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
  * The series of events that happen from the mounting of a React component to its Unmounting.

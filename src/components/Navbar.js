@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Navbar extends Component { // rce
   render() {
@@ -6,9 +7,9 @@ export class Navbar extends Component { // rce
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               NewsMonkey
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -26,24 +27,73 @@ export class Navbar extends Component { // rce
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">business</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/business"
+                  >
+                    Business
+                  </Link>
+                </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">entertainment</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/entertainment"
+                  >
+                    Entertainment
+                  </Link>
+                </li>
+                {/* <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/general"
+                  >
+                    General
+                  </Link>
+                </li> */}
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">general</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/health"
+                  >
+                    Health
+                  </Link>
+                </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">health</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/science"
+                  >
+                    Science
+                  </Link>
+                </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">science</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/sports"
+                  >
+                    Sports
+                  </Link>
+                </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">sports</a></li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">technology</a></li>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/technology"
+                  >
+                    Technology
+                  </Link>
+                </li>
               </ul>
               <form className="d-flex" role="search">
                 <input
