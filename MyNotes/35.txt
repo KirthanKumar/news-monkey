@@ -39,5 +39,12 @@ apiKey = process.env.REACT_APP_NEWS_API;
 -------------------------------------------------------------------
 
 #38 - INTRODUCTION TO REACT HOOKS:
+
+
+-------------------------------------------------------------------
+
 #39 - CHANGING CLASS BASED TO FUNCTION BASED:
+
+-------------------------------------------------------------------
+
 #40 - STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
