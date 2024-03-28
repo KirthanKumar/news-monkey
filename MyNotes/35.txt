@@ -41,9 +41,25 @@ apiKey = process.env.REACT_APP_NEWS_API;
 #38 - INTRODUCTION TO REACT HOOKS:
 We used class based components only for learning prpose, mostly we will use  function based components. We will convert this news-monkey project fully from class to function based components project. 
 
+git checkout main --> this command is used to switch to main branch
+
+hooks are function in function based components based, which allow to do all the things that we did in class based components.
+
+What are React hooks?
+* Features of class based components in function based components
+* It allows you to use state and other React features without writing class
+* Hooks are the functions which "hook into" React state and lifecycle features from function components.
+
+Commonly used React Hooks:
+* useState
+* useEffect (the work which was done by componentDidMound() componentDidUpdate(), will be done in class based components using useEffect)
+* useContext (When we have nexted components it will become a tree, and when we try to pass prop from the App.js to lowermost component the prop has to pass through its intermediate components also, this is called as prop drill. This we saw in news-monkey, when we had to pass prop to NewsItem component it goes through Newsm component. To resolve this we use function which is made globally available by context api)
+* useRef (returns mutable reference object which contains .current property. Using this we can point to any element in DOM. In simple words useRef sontains reference to some DOM element)
+
 -------------------------------------------------------------------
 
 #39 - CHANGING CLASS BASED TO FUNCTION BASED:
+react app can be partially class and function based also.
 
 -------------------------------------------------------------------
 
