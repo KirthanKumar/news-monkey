@@ -64,3 +64,4 @@ react app can be partially class and function based also.
 -------------------------------------------------------------------
 
 #40 - STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
+when fetchMoreData() function is running, first thing we are doing is setPage(page+1); this is not setting page to its new state immediately, it is taking some time as it is a asynchronous function. So to resolve this in "url" we will manually write "page=${page+1}" and then setPage(page+1). 

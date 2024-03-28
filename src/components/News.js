@@ -14,10 +14,6 @@ const News = (props) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  document.title = `${capitalizeFirstletter(
-      props.category
-    )} - NewsMonkey`;
-
   const updateNews = async (pageNo) => {
     props.setProgress(10);
 
@@ -41,23 +37,16 @@ const News = (props) => {
   };
 
   useEffect(() => {
+    document.title = `${capitalizeFirstletter(props.category)} - NewsMonkey`;
     updateNews();
+    // eslint-disable-next-line
   }, []);
 
-  const handleNextClick = async () => {
-    setPage(page + 1);
-    updateNews(page);
-  };
-
-  const handlePrevClick = async () => {
-    setPage(page - 1);
-    updateNews(page);
-  };
-
   const fetchMoreData = async () => {
-    setPage(page + 1);
 
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
+
+    setPage(page + 1);
 
     let data = await fetch(url);
 
