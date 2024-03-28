@@ -30,7 +30,7 @@ export class News extends Component {
   }
 
   async componentDidMount() {
-    console.log("componentDidMount");
+    // console.log("componentDidMount");
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=c4c450c08e904226a8ff20ed56c63844&page=${this.state.page}&pageSize=${this.props.pageSize}`;
 
     this.setState({ loading: true });
@@ -42,7 +42,7 @@ export class News extends Component {
       articles: parsedData.articles,
       totalResults: parsedData.totalResults,
       loading: false,
-    });
+    }); 
   }
 
   handleNextClick = async () => {
@@ -117,6 +117,9 @@ export class News extends Component {
                   }
                   imageUrl={element.urlToImage}
                   newsUrl={element.url}
+                  author={element.author}
+                  date={element.publishedAt}
+                  source={element.source.name}
                 />
               </div>
             );

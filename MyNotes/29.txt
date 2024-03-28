@@ -40,7 +40,14 @@ in path "/" News component is already mounted with catrgory="general", therefore
 -------------------------------------------------------------------
 
 #32 - ADDING TIME, AUTHOR AND NEWS SOURCES:
-REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
+used badges from bootstrap
+
+-------------------------------------------------------------------
+
+#33 - REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
+
+-------------------------------------------------------------------
+
 REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
  * The series of events that happen from the mounting of a React component to its Unmounting.
     *Mounting - Birth of your component
