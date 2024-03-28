@@ -9,18 +9,50 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
+      page: 1,
     };
   }
 
   async componentDidMount() {
-    // console.log("componentDidMount");
-    let url =
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844";
+    console.log("componentDidMount");
+    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844&page=${this.state.page}&pageSize=20`;
     let data = await fetch(url);
     let parsedData = await data.json();
-    console.log(parsedData);
-    this.setState({ articles: parsedData.articles });
+    // console.log(parsedData);
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+    });
   }
+
+  handleNextClick = async () => {
+    // console.log("Next");
+    console.log(Math.ceil(this.state.totalResults / 20));
+    if (this.state.page + 1 > Math.ceil(this.state.totalResults / 20)) {
+    } else {
+      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844&page=${
+        this.state.page + 1
+      }&pageSize=20`;
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      // console.log(parsedData);
+      this.setState({
+        articles: parsedData.articles,
+        page: this.state.page + 1,
+      });
+    }
+  };
+
+  handlePrevClick = async () => {
+    // console.log("Previous");
+    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844&page=${
+      this.state.page - 1
+    }&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    // console.log(parsedData);
+    this.setState({ articles: parsedData.articles, page: this.state.page - 1 });
+  };
 
   render() {
     // console.log("render");
@@ -45,6 +77,24 @@ export class News extends Component {
               </div>
             );
           })}
+        </div>
+        <div className="container d-flex justify-content-between">
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={this.handlePrevClick}
+            disabled={this.state.page <= 1}
+          >
+            &larr; Previous
+          </button>
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={this.handleNextClick}
+          disabled = {this.state.page + 1 > Math.ceil(this.state.totalResults / 20)}
+          >
+            Next &rarr;
+          </button>
         </div>
       </div>
     );

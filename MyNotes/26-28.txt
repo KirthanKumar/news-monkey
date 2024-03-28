@@ -1,0 +1,50 @@
+#26 - LOOPING THROUGH AN ARRAY IN JSX:
+When we use map() method and iterate over items then we have to give a unique 'key' defining item. In here we will be using "url" in "articles" array as unique identifier of each item. That is key={element.url}
+and also newsUrl={element.url} as discussed earlier.
+
+-------------------------------------------------------------------
+
+#27 - USING FETCH API FOR HTTP CALL:
+we will bring news directly from newsAPI by making GET request.
+
+https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844
+this gives response of top-headlines in india - see https://newsapi.org/docs/endpoints/top-headlines
+
+https://newsapi.org/v2/everything?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844
+this gives response of every news in india - see https://newsapi.org/docs/endpoints/everything
+
+So now will bring news from these endpoints.
+
+componentDidMount() is a life cycle method. This method is run after render() method. And render() method runs after constructor()
+
+Dont fetch from the API url again and again while developing as limit might get exhausted.
+
+can use unsplash api to get image if any image is null in the response to our GET request to newsAPI. but i am using some random image https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw
+
+sampleOutput.json is not required anymore
+
+-------------------------------------------------------------------
+
+#28 - ADDING PREVIOUS AND NEXT BUTTON TO POPULATE NEWSITEMS: when we do GET request to 
+https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844 is same as (https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844&page=1)
+we see that "totalResults": 38, but we only see partial number of results, as other results are in page=2
+https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844&page=2
+
+so we add previous and next button to access that also 
+
+&rarr; -> right arrow
+&larr; -> left arrow
+
+https://getbootstrap.com/docs/5.0/utilities/flex/
+
+pageSize=20 as a parameter in url describes that in one page we will get to see 20 news articles
+(totalResults/pageSize) gives the number of pages where we will see results. Beyond this page number we will not see any srticles. 
+will use below code in handleNextClik(): 
+if(this.state.page+1 > Math.ceil(this.state.totalResults/20)){
+   // will do nothing
+}
+else{
+   // will go to next page and display results 
+}
+
+example: Math.ceil(4.6) = 5
