@@ -47,7 +47,7 @@ render() function in src/App.js compiles JSX to html and renders it.
 
 -------------------------------------------------------------------
 
-FETCHING API KEY FROM NEWS API:
+#24 - FETCHING API KEY FROM NEWS API:
 https://newsapi.org/docs/get-started
 In here we can see sample request, and response in json format. 
 
@@ -60,31 +60,19 @@ Instead of performing GET request again and again to see the response for https:
 
 -------------------------------------------------------------------
 
-UNDERSTANDING STATE IN CLASS BASED COMPONENTS:
-LOOPING THROUGH AN ARRAY IN JSX:
-USING FETCH API FOR HTTP CALL:
-ADDING PREVIOUS AND NEXT BUTTON:
-ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: --spinner pending--
-ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
-FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): --pending--
-ADDING TIME, AUTHOR AND NEWS SOURCES:
-REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
-REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
- * The series of events that happen from the mounting of a React component to its Unmounting.
-    *Mounting - Birth of your component
-    *Update - Grouth of your component
-    *Unmount - Death of your component
+#25 - UNDERSTANDING STATE IN CLASS BASED COMPONENTS:
+constructor() {
+  super();
+  console.log("Hello I am a constructor"); 
+}
+inside constructor super() should be called mandateryly.
+constructor method is executed when a object of this class is created. This constructor() is in NewsItem.js, and we have rendered NewsItem.js 3-4 times first time in News.js component. Therefore we see "Hello I am a constructor" printed 3-4 times in console. So that means how many ever times the component is used that many times object is created for that particular components class and as soon as object is created the constructor() is run. 
+Therefore we see only one object of News.js as we have used <News/> component only once in App.js 
 
- Methods in React Component Lifecycle
-    * The render() methos is used to render HTML of the component in react. This method is required for a class based component to render the DOM. It runs during the mounting and updating of your component. Render() method should be pure ie you cannot modify state inside it.
-    * The componentDidMount() method runs after the component output has been rendered to the DOM.
-    * The componentDidUpdate() method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
-    * The componentWillUnmount() lifecycle method is called just before the component is unmounted and destroyed. Usually used to perform cleanups.
-    https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+We can set state of the component in its constructor
 
-ADDING INFINITE SCROLL TO NEWSMONKEY: npm i react-infinite-scroll-component
-ADDING A TOP LOADING BAR TO NEWSMONKEY: npm i react-top-loading-bar
-HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
-INTRODUCTION TO REACT HOOKS:
-CHANGING CLASS BASED TO FUNCTION BASED:
-STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
+this.state should not be set directly instead should use this.setState() to set state. Like we did in function based component.
+
+we use this.state and this.setState() when we want something to change again and again without reloading page. So we will not set title, description etc.. as state instead will pass it a prop to the component. This is major difference between props and state.
+
+'newsUrl' send as prop to NewsItem component will uniquely define the news. If we see in 'articles' array of 'sampleOutput.json' file we see that "url" uniquely defines the news. so we will pass "url" to "newsUrl" from News.js to NewsItem component.
