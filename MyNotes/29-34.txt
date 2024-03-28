@@ -48,7 +48,7 @@ used badges from bootstrap
 
 -------------------------------------------------------------------
 
-REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
+#34 - REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
  * The series of events that happen from the mounting of a React component to its Unmounting.
     *Mounting - Birth of your component
     *Update - Grouth of your component
@@ -60,10 +60,3 @@ REACT COMPONENT LIFECYCLE AND LIFECYCLE METHODS:
     * The componentDidUpdate() method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
     * The componentWillUnmount() lifecycle method is called just before the component is unmounted and destroyed. Usually used to perform cleanups.
     https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
-
-ADDING INFINITE SCROLL TO NEWSMONKEY: npm i react-infinite-scroll-component
-ADDING A TOP LOADING BAR TO NEWSMONKEY: npm i react-top-loading-bar
-HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
-INTRODUCTION TO REACT HOOKS:
-CHANGING CLASS BASED TO FUNCTION BASED:
-STICKY NAVBAR AND NEWSMONKEY BUGFIXES:

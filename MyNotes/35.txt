@@ -1,0 +1,10 @@
+#35 - ADDING INFINITE SCROLL TO NEWSMONKEY: 
+npm i react-infinite-scroll-component
+
+-------------------------------------------------------------------
+
+#36 - ADDING A TOP LOADING BAR TO NEWSMONKEY: npm i react-top-loading-bar
+#37 - HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
+#38 - INTRODUCTION TO REACT HOOKS:
+#39 - CHANGING CLASS BASED TO FUNCTION BASED:
+#40 - STICKY NAVBAR AND NEWSMONKEY BUGFIXES:
