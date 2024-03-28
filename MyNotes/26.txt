@@ -19,11 +19,15 @@ componentDidMount() is a life cycle method. This method is run after render() me
 
 Dont fetch from the API url again and again while developing as limit might get exhausted.
 
-can use unsplash api to get image if any image is null in the response to our GET request to newsAPI. but i am using some random image
+can use unsplash api to get image if any image is null in the response to our GET request to newsAPI. but i am using some random image https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300-rw
+
+sampleOutput.json is not required anymore
 
 -------------------------------------------------------------------
 
-ADDING PREVIOUS AND NEXT BUTTON:
+#28 - ADDING PREVIOUS AND NEXT BUTTON:
+
+
 ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: --spinner pending--
 ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
 FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): --pending--
