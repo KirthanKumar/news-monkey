@@ -1,8 +1,36 @@
 #29 - ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: 
+this condition says that when loading is false then only display the result. 
+{!(this.state.loading) && this.state.articles.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <NewsItem
+                  // title={element.title ? element.title.slice(0, 40) : ""}
+                  title={element.title ? element.title : ""} // no need to slice it looks good without slicing
+                  // description={(element.title.length+element.description.length > 100)?element.description.slice(0, 100-element.title.length):element.description}
+                  description={
+                    // element.description ? element.description.slice(0, 80) : ""
+                    element.description ? element.description : ""
+                  }
+                  imageUrl={element.urlToImage}
+                  newsUrl={element.url}
+                />
+              </div>
+            );
+          })}
+
+{this.state.loading && <Spinner />}
+this condition says that when loading is true then only show Spinner component.
+
+we change state of loding to true before fetching data from url and set it to false after fetching data from url. By doing this we get a feeling of data loading. 
+
+To delay the reponses from the API we can do network throttling slow down the network speed. goto inspect -> network -> no throttling, now we can select options here. We can also customize in here also.
 
 -------------------------------------------------------------------
 
-ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
+#30 - ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
+
+-------------------------------------------------------------------
+
 FETCHING NEWS CATEGORY WISE IN NEWSMONKEY REACT APP USING REACT ROUTER DOM(see documentation): --pending--
 ADDING TIME, AUTHOR AND NEWS SOURCES:
 REFACTORING NEWS COMPONENT TO USE THE SAME FUNCTION:
