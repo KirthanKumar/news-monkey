@@ -19,7 +19,16 @@ using this example:
 
 -------------------------------------------------------------------
 
-#36 - ADDING A TOP LOADING BAR TO NEWSMONKEY: npm i react-top-loading-bar
+#36 - ADDING A TOP LOADING BAR TO NEWSMONKEY: 
+https://www.npmjs.com/package/react-top-loading-bar
+npm i react-top-loading-bar
+
+.this can be used with arrow function only not normal function.
+
+when request limit is exhausted we get a error saying this.atate.articles is not defined
+
+-------------------------------------------------------------------
+
 #37 - HIDING API BY ADDING ADDING CUSTOM ENVIRONMENT VARIABLE:
 #38 - INTRODUCTION TO REACT HOOKS:
 #39 - CHANGING CLASS BASED TO FUNCTION BASED:
