@@ -5,6 +5,24 @@ and also newsUrl={element.url} as discussed earlier.
 -------------------------------------------------------------------
 
 #27 - USING FETCH API FOR HTTP CALL:
+we will bring news directly from newsAPI by making GET request.
+
+https://newsapi.org/v2/top-headlines?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844
+this gives response of top-headlines in india - see https://newsapi.org/docs/endpoints/top-headlines
+
+https://newsapi.org/v2/everything?country=in&apiKey=c4c450c08e904226a8ff20ed56c63844
+this gives response of every news in india - see https://newsapi.org/docs/endpoints/everything
+
+So now will bring news from these endpoints.
+
+componentDidMount() is a life cycle method. This method is run after render() method. And render() method runs after constructor()
+
+Dont fetch from the API url again and again while developing as limit might get exhausted.
+
+can use unsplash api to get image if any image is null in the response to our GET request to newsAPI. but i am using some random image
+
+-------------------------------------------------------------------
+
 ADDING PREVIOUS AND NEXT BUTTON:
 ADDING LOADING SPINNER AND VARIABLE PAGESIZE RO NEWSMONKEY: --spinner pending--
 ADDING CATEGORIES AND PROP TYPES TO NEWSMONKEY REACT APP:
